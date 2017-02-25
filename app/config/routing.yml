@@ -24,4 +24,7 @@ calc_substract:
     path: /substract/{param1}/
     defaults: {_controller:AppBundle:Calculator:substract}
     
+calc_multiply:
+    path: /multiply/
+    defaults: {_controller:AppBundle:Calculator:multiply}
 

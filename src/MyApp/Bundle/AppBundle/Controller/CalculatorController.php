@@ -25,5 +25,11 @@ class CalculatorController
 		$calculator = new Calculator();
 		return new Response((int) $calculator->substract($param1,$request->query->get('param')));
 	}
-
+	
+	// /multiply/?param1=3&param2=3 returns 9
+	public function multiplyAction(Request $request)
+	{
+		$calculator = new Calculator();
+		return new Response((int) $calculator->multiply($request->query->get('param1'),$request->query->get('param2'))); 
+	}
 }
