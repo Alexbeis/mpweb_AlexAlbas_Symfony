@@ -14,9 +14,14 @@
 #  methods: [POST]
 
 calc_add:
-    path: /add/{param1}/{param2}/
+    path: /add/
     defaults: {_controller:AppBundle:Calculator:add}
-    methods: [GET]
+    methods: [POST]
     requirements:
-        param1: '\d+'
-        param2: '\d+'
+         param1: '\d+'
+         param2: '\d+'
+calc_substract:
+    path: /substract/{param1}/
+    defaults: {_controller:AppBundle:Calculator:substract}
+    
+
