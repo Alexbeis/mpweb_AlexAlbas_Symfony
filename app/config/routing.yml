@@ -1,0 +1,22 @@
+#app:
+#    resource: "@AppBundle/Controller/"
+#    type:     annotation
+#
+
+
+#request_querystring:
+#  path: /querystring/
+#  defaults: { _controller: AppBundle:Default:requestQuerystring }
+
+#request_post:
+#  path: /post/
+#  defaults: { _controller: AppBundle:Default:requestPost }
+#  methods: [POST]
+
+calc_add:
+    path: /add/{param1}/{param2}/
+    defaults: {_controller:AppBundle:Calculator:add}
+    methods: [GET]
+    requirements:
+        param1: '\d+'
+        param2: '\d+'
