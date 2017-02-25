@@ -32,4 +32,12 @@ class CalculatorController
 		$calculator = new Calculator();
 		return new Response((int) $calculator->multiply($request->query->get('param1'),$request->query->get('param2'))); 
 	}
+
+	// /division/9/3
+	public function divisionAction($param1, $param2)
+	{
+	
+		$calculator = new Calculator();
+		return new Response((int)$calculator->division($param1,$param2));
+	}
 }

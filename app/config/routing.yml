@@ -28,3 +28,10 @@ calc_multiply:
     path: /multiply/
     defaults: {_controller:AppBundle:Calculator:multiply}
 
+calc_division:
+    path: /division/{param1}/{param2}/
+    defaults: {_controller:AppBundle:Calculator:division}
+    requirements:
+         param1: '\d+'
+         param2: '\d+'
+
